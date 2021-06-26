@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/greate_travel"
+                    android:textColor="@color/color_grey"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                    android:id="@+id/fromCity"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/rounded_corners_gray"
+                    android:hint="@string/from"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="@color/hintColor"
+                    app:layout_constraintEnd_toEndOf="@+id/textView"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:ignore="RtlSymmetry" />
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/where_are_you"
+                    android:textColor="@color/color_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                    android:id="@+id/fromErrorMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fromCityError"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/fromCity"
+                    app:layout_constraintStart_toStartOf="@+id/fromCity"
+                    app:layout_constraintTop_toBottomOf="@+id/fromCity" />
+
+            <AutoCompleteTextView
+                    android:id="@+id/toCity"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_corners_gray"
+                    android:hint="@string/to"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="@color/hintColor"
+
+                    app:layout_constraintEnd_toEndOf="@+id/fromCity"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/fromCity"
+                    app:layout_constraintTop_toBottomOf="@+id/from_street"
+                    tools:ignore="RtlSymmetry" />
+
+            <TextView
+                    android:id="@+id/toErrorMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/toCityError"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/toCity"
+                    app:layout_constraintStart_toStartOf="@+id/toCity"
+                    app:layout_constraintTop_toBottomOf="@+id/toCity" />
+
+            <EditText
+                    android:id="@+id/price"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_corners_gray"
+                    android:hint="@string/price"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="@color/hintColor"
+                    app:layout_constraintEnd_toStartOf="@+id/passengerCount"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/to_street"
+                    tools:ignore="RtlSymmetry" />
+
+            <TextView
+                    android:id="@+id/passengerCount"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_corners_gray"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/passenger_title"
+                    android:textColor="@color/purple_500"
+                    android:textSize="18sp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/price"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/price"
+                    app:layout_constraintTop_toTopOf="@+id/price"
+                    app:layout_constraintVertical_bias="1.0">
+
+
+            </TextView>
+
+            <TextView
+                    android:id="@+id/time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/time"
+                    android:padding="16sp"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@color/purple_700"
+                    android:textSize="16sp"
+
+                    app:drawableLeftCompat="@drawable/time"
+                    app:drawableStartCompat="@drawable/time"
+                    app:layout_constraintEnd_toEndOf="@+id/passengerCount"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/day"
+                    app:layout_constraintTop_toTopOf="@+id/day"
+                    tools:ignore="RtlSymmetry" />
+
+            <TextView
+                    android:id="@+id/day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/today"
+                    android:importantForAutofill="no"
+                    android:padding="16sp"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@color/purple_700"
+                    android:textSize="16sp"
+                    app:drawableLeftCompat="@drawable/ic_calendar"
+                    app:drawableStartCompat="@drawable/ic_calendar"
+                    app:layout_constraintEnd_toStartOf="@+id/time"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price_error"
+                    tools:ignore="LabelFor,RtlSymmetry" />
+
+            <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16sp"
+                    android:text="@string/go"
+
+                    app:layout_constraintEnd_toEndOf="@+id/time"
+                    app:layout_constraintStart_toStartOf="@+id/day"
+                    app:layout_constraintTop_toBottomOf="@+id/timeError" />
+
+            <ImageView
+                    android:id="@+id/clearFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fromCity"
+                    app:layout_constraintEnd_toEndOf="@+id/fromCity"
+                    app:layout_constraintTop_toTopOf="@+id/fromCity"
+                    app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+            <ImageView
+                    android:id="@+id/clearTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/toCity"
+                    app:layout_constraintEnd_toEndOf="@+id/toCity"
+                    app:layout_constraintTop_toTopOf="@+id/toCity"
+                    app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+            <ImageView
+                    android:id="@+id/clearPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/price"
+                    app:layout_constraintEnd_toEndOf="@+id/price"
+                    app:layout_constraintTop_toTopOf="@+id/price"
+                    app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+            <EditText
+                    android:id="@+id/from_street"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="12dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/rounded_corners_gray"
+                    android:hint="@string/street_from"
+                    android:inputType="textPersonName"
+                    android:paddingStart="16dp"
+
+                    android:paddingLeft="16dp"
+                    android:textColorHint="@color/hintColor"
+                    app:layout_constraintEnd_toEndOf="@+id/fromCity"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/fromCity"
+                    app:layout_constraintTop_toBottomOf="@+id/fromErrorMessage"
+                    tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                    android:id="@+id/clearFromStreet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/from_street"
+                    app:layout_constraintEnd_toEndOf="@+id/from_street"
+                    app:layout_constraintTop_toTopOf="@+id/from_street"
+                    app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+            <EditText
+                    android:id="@+id/to_street"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_corners_gray"
+
+                    android:hint="@string/street_to_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:paddingStart="16dp"
+
+                    android:paddingLeft="16dp"
+                    android:textColorHint="@color/hintColor"
+                    app:layout_constraintEnd_toEndOf="@+id/toCity"
+                    app:layout_constraintStart_toStartOf="@+id/toCity"
+                    app:layout_constraintTop_toBottomOf="@+id/toErrorMessage"
+                    tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                    android:id="@+id/clear_to_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/to_street"
+                    app:layout_constraintEnd_toEndOf="@+id/to_street"
+                    app:layout_constraintTop_toTopOf="@+id/to_street"
+                    app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+            <TextView
+                    android:id="@+id/price_error"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/price_error"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/passengerCount"
+                    app:layout_constraintStart_toStartOf="@+id/price"
+                    app:layout_constraintTop_toBottomOf="@+id/price" />
+
+            <TextView
+                    android:id="@+id/timeError"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/time_error"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/time"
+                    app:layout_constraintStart_toStartOf="@+id/day"
+                    app:layout_constraintTop_toBottomOf="@+id/time" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

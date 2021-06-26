@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/closeIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/empty"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+        <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="Количество бронируемых мест"
+                android:textSize="24sp"
+                android:textColor="@color/color_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/closeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/closeIcon" />
+
+        <ImageView
+                android:id="@+id/minus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:contentDescription="@string/empty"
+                android:layout_marginTop="48dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/remove" />
+
+        <ImageView
+                android:id="@+id/plus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/empty"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/minus"
+                app:srcCompat="@drawable/plus" />
+
+        <TextView
+                android:id="@+id/passengerCount"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="1"
+                android:textColor="@color/purple_500"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@+id/minus"
+                app:layout_constraintEnd_toStartOf="@+id/plus"
+                app:layout_constraintStart_toEndOf="@+id/minus"
+                app:layout_constraintTop_toTopOf="@+id/minus" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

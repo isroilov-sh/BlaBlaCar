@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/location_icon"
+            android:title="@string/travels" />
+    <item
+            android:id="@+id/searchTravelFragment"
+            android:icon="@drawable/search_icon"
+            android:title="@string/search" />
+
+    <item
+            android:id="@+id/addTripFragment"
+            android:icon="@drawable/add_icon"
+            android:title="@string/create" />
+    <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/profile_icon"
+            android:title="@string/profile" />
+
+
+</menu>

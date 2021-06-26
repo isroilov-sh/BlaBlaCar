@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Ваша статистика"
+                    android:textColor="@color/color_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp" />
+
+            <TextView
+                    android:id="@+id/stats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/getting_revies"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+
+            <TextView
+                    android:id="@+id/allstats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/sending_reviews"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+
+            <TextView
+                    android:id="@+id/historyAsPassenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="История бронирований"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="О нас"
+                    android:textColor="@color/color_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Помощь"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+            <TextView
+                    android:id="@+id/agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Условия использования"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:layout_marginStart="32dp" />
+
+            <TextView
+                    android:id="@+id/security"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Конфиденциальность"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+            <TextView
+
+                    android:id="@+id/exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Выйти"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple_700"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+
+                    />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

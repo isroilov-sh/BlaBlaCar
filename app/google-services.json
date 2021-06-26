@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "862128146873",
+    "project_id": "savorcar-404fe",
+    "storage_bucket": "savorcar-404fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862128146873:android:2473c64cfd7e60d1328e68",
+        "android_client_info": {
+          "package_name": "tj.behruz.savorcarTj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862128146873-ap91sokvnhcftsmiiv0siaiqpvqe11ae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAXbHfM0xzwu4OhTKka9wVCADgNJnfLd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862128146873-ap91sokvnhcftsmiiv0siaiqpvqe11ae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

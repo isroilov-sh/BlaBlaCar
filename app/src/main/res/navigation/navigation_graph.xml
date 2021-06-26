@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation_graph"
+        app:startDestination="@id/loginFragment">
+
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="tj.behruz.savorcarTj.ui.login.LoginFragment"
+            android:label="LoginFragment">
+        <action
+                android:id="@+id/action_loginFragment_to_smsFragment"
+                app:destination="@id/smsFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="tj.behruz.savorcarTj.ui.home.HomeFragment"
+            android:label="HomeFragment">
+        <action
+                android:id="@+id/action_homeFragment_to_passengerTripFragment"
+                app:destination="@id/passengerTripFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+                android:id="@+id/action_homeFragment_to_tripInfoFragment"
+                app:destination="@id/tripInfoFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/smsFragment"
+            android:name="tj.behruz.savorcarTj.ui.login.SmsFragment"
+            android:label="SmsFragment">
+        <action
+                android:id="@+id/action_smsFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+                android:id="@+id/action_smsFragment_to_registrationFragment"
+                app:destination="@id/registrationFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <action
+            android:id="@+id/action_global_homeFragment"
+            app:destination="@id/homeFragment" />
+    <fragment
+            android:id="@+id/searchTravelFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.SearchTravelFragment"
+            android:label="SearchTravelFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right">
+        <action
+                android:id="@+id/action_searchTravelFragment_to_searchTripFragment"
+                app:destination="@id/searchTripFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/searchTripFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.SearchTripFragment"
+            android:label="SearchTripFragment">
+        <action
+                android:id="@+id/action_searchTripFragment_to_travelInfoFragment"
+                app:destination="@id/travelInfoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addTripFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.AddTripFragment"
+            android:label="AddTripFragment">
+        <action
+                android:id="@+id/action_addTripFragment_to_addTripSuccessFragment"
+                app:destination="@id/addTripSuccessFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+                android:id="@+id/action_addTripFragment_to_carInfoFragment"
+                app:destination="@id/carInfoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addTripSuccessFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.AddTripSuccessFragment"
+            android:label="AddTripSuccessFragment" />
+    <fragment
+            android:id="@+id/passengerTripFragment"
+            android:name="tj.behruz.savorcarTj.ui.passenger.PassengerTripFragment"
+            android:label="PassengerTripFragment">
+
+    </fragment>
+    <fragment
+            android:id="@+id/reasonFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.ReasonFragment"
+            android:label="ReasonFragment" />
+    <fragment
+            android:id="@+id/profileFragment"
+            android:name="tj.behruz.savorcarTj.ui.profile.ProfileFragment"
+            android:label="ProfileFragment">
+        <action
+                android:id="@+id/action_profileFragment_to_carInfoFragment"
+                app:destination="@id/carInfoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/carPropertyFragment"
+            android:name="tj.behruz.savorcarTj.ui.profile.CarPropertyFragment"
+            android:label="CarPropertyFragment" />
+    <action
+            android:id="@+id/action_global_carPropertyFragment"
+            app:destination="@id/carPropertyFragment" />
+    <fragment
+            android:id="@+id/userInfoFragment"
+            android:name="tj.behruz.savorcarTj.ui.profile.UserInfoFragment"
+            android:label="UserInfoFragment" />
+    <action
+            android:id="@+id/action_global_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    <fragment
+            android:id="@+id/carInfoFragment"
+            android:name="tj.behruz.savorcarTj.ui.profile.CarInfoFragment"
+            android:label="CarInfoFragment" />
+    <action
+            android:id="@+id/action_global_carInfoFragment"
+            app:destination="@id/carInfoFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <fragment
+            android:id="@+id/tripInfoFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.TripInfoFragment"
+            android:label="TripInfoFragment">
+        <action
+                android:id="@+id/action_tripInfoFragment_to_cancelTripFragment"
+                app:destination="@id/cancelTripFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/historyFragment"
+            android:name="tj.behruz.savorcarTj.ui.history.HistoryFragment"
+            android:label="HistoryFragment">
+        <action
+                android:id="@+id/action_historyFragment_to_historyDescription"
+                app:destination="@id/historyDescription" />
+    </fragment>
+    <action
+            android:id="@+id/action_global_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <fragment
+            android:id="@+id/cancelTripFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.CancelTripFragment"
+            android:label="CancelTripFragment" />
+    <fragment
+            android:id="@+id/registrationFragment"
+            android:name="tj.behruz.savorcarTj.ui.registration.RegistrationFragment"
+            android:label="RegistrationFragment">
+        <action
+                android:id="@+id/action_registrationFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/allReviewFragment"
+            android:name="tj.behruz.savorcarTj.ui.review.AllReviewFragment"
+            android:label="AllReviewFragment" />
+    <fragment
+            android:id="@+id/myReviewFragment"
+            android:name="tj.behruz.savorcarTj.ui.review.MyReviewFragment"
+            android:label="MyReviewFragment" />
+    <action
+            android:id="@+id/action_global_myReviewFragment"
+            app:destination="@id/myReviewFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <action
+            android:id="@+id/action_global_allReviewFragment"
+            app:destination="@id/allReviewFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <fragment
+            android:id="@+id/travelInfoFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.TravelInfoFragment"
+            android:label="TravelInfoFragment">
+        <action
+                android:id="@+id/action_travelInfoFragment_to_bookingSuccessFragment"
+                app:destination="@id/bookingSuccessFragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/bookingSuccessFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.BookingSuccessFragment"
+            android:label="BookingSuccessFragment" />
+    <fragment
+            android:id="@+id/historyDescription"
+            android:name="tj.behruz.savorcarTj.ui.travel.HistoryDescription"
+            android:label="HistoryDescription" />
+    <fragment
+            android:id="@+id/preferenceFragment"
+            android:name="tj.behruz.savorcarTj.ui.review.PreferenceFragment"
+            android:label="PreferenceFragment" />
+    <action
+            android:id="@+id/action_global_preferenceFragment"
+            app:destination="@id/preferenceFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <fragment
+            android:id="@+id/userViewFragment"
+            android:name="tj.behruz.savorcarTj.ui.profile.UserViewFragment"
+            android:label="UserViewFragment" />
+    <action
+            android:id="@+id/action_global_userViewFragment"
+            app:destination="@id/userViewFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <fragment
+            android:id="@+id/reverseFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.ReverseFragment"
+            android:label="ReverseFragment" />
+    <action
+            android:id="@+id/action_global_reverseFragment"
+            app:destination="@id/reverseFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <action
+            android:id="@+id/action_global_addTripSuccessFragment"
+            app:destination="@id/addTripSuccessFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+
+    <action
+            android:id="@+id/action_global_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    <action
+            android:id="@+id/action_global_searchTripFragment"
+            app:destination="@id/searchTripFragment" />
+    <action
+            android:id="@+id/action_global_profileFragment"
+            app:destination="@id/profileFragment" />
+    <action
+            android:id="@+id/action_global_searchTravelFragment"
+            app:destination="@id/searchTravelFragment" />
+    <action
+            android:id="@+id/action_global_addTripFragment"
+            app:destination="@id/addTripFragment" />
+    <fragment
+            android:id="@+id/tripDetailsFragment"
+            android:name="tj.behruz.savorcarTj.ui.travel.TripDetailsFragment"
+            android:label="TripDetailsFragment">
+        <action
+                android:id="@+id/action_tripDetailsFragment_to_cancelTripFragment"
+                app:destination="@id/cancelTripFragment" />
+    </fragment>
+    <action
+            android:id="@+id/action_global_tripDetailsFragment"
+            app:destination="@id/tripDetailsFragment" />
+    <fragment
+            android:id="@+id/passengerHistoryFragment"
+            android:name="tj.behruz.savorcarTj.ui.trips.PassengerHistoryFragment"
+            android:label="PassengerHistoryFragment">
+        <action
+                android:id="@+id/action_passengerHistoryFragment_to_tripDetailsFragment"
+                app:destination="@id/tripDetailsFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/driversHistoryFragment"
+            android:name="tj.behruz.savorcarTj.ui.trips.DriversHistoryFragment"
+            android:label="DriversHistoryFragment">
+        <action
+                android:id="@+id/action_driversHistoryFragment_to_tripDetailsFragment"
+                app:destination="@id/tripDetailsFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/historyDriverFragment"
+            android:name="tj.behruz.savorcarTj.ui.trips.HistoryDriverFragment"
+            android:label="HistoryDriverFragment" />
+    <fragment
+            android:id="@+id/historyPassengerFragment"
+            android:name="tj.behruz.savorcarTj.ui.trips.HistoryPassengerFragment"
+            android:label="HistoryPassengerFragment" /><action android:id="@+id/action_global_reasonFragment" app:destination="@id/reasonFragment"/>
+</navigation>
