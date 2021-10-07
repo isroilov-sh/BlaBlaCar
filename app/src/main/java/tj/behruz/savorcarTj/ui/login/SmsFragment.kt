@@ -2,6 +2,7 @@ package tj.behruz.savorcarTj.ui.login
 
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -88,6 +89,7 @@ class SmsFragment: Fragment() {
         val hash = Utils.generateHash(shared.phone.plus("blabla").plus(shared.phone))
 
         userViewModel.signIn(shared.phone.toString(), hash).observe(viewLifecycleOwner, Observer {
+            Log.d("SmsFragment", "getInfo: $it")
             if (it.code == 6) {
                 shared.userId = it.data.user_id.toInt()
                 shared.username = it.data.name

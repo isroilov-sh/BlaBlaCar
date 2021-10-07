@@ -16,6 +16,8 @@ interface ViewModelInjector {
     fun inject(travelViewModel: TravelViewModel)
     fun inject(userViewModel: UserViewModel)
 
+
+
     @Component.Builder
     interface Builder {
         fun build(): ViewModelInjector
